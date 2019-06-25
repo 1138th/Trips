@@ -2,7 +2,7 @@ package Trip;
 
 class TripPools extends Trip {
 
-    String[] TypePool(){
+    static String[] TypePool(){
         String[] pool = new String[8];
         int i = 0;
         pool[i++] = "vacation";
@@ -16,7 +16,7 @@ class TripPools extends Trip {
         return pool;
     }
 
-    String[] TransportPool(){
+    static String[] TransportPool(){
         String[] pool = new String[7];
         int i = 0;
         pool[i++] = "air";
@@ -29,32 +29,16 @@ class TripPools extends Trip {
         return pool;
     }
 
-    String[] FoodPool(){
-        String[] pool = new String[111];
+    static String[] FoodPool(){
+        String[] pool = new String[7];
         int i = 0;
-        pool[i++] = "full";
-        pool[i++] =
-        return pool;
-    }
-
-    String[] PurposePool(){
-        String[] pool = new String[111];
-        int i = 0;
-
-        return pool;
-    }
-
-    int[] NumberPool(){
-        int[] pool = new int[111];
-        int i = 0;
-
-        return pool;
-    }
-
-    int[] DurationPool(){
-        int[] pool = new int[111];
-        int i = 0;
-
+        pool[i++] = "breakfast";
+        pool[i++] = "lunch";
+        pool[i++] = "dinner";
+        pool[i++] = "breakfast-lunch";
+        pool[i++] = "breakfast-dinner";
+        pool[i++] = "lunch-dinner";
+        pool[i] = "full";
         return pool;
     }
 }

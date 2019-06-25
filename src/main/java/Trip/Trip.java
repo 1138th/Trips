@@ -5,7 +5,6 @@ public abstract class Trip {
     private String type;
     private String transport;
     private String food;
-    private String purpose;
     private int number;
     private int duration;
 
@@ -31,14 +30,6 @@ public abstract class Trip {
 
     protected void setFood(String food) {
         this.food = food;
-    }
-
-    public String getPurpose() {
-        return purpose;
-    }
-
-    public void setPurpose(String purpose) {
-        this.purpose = purpose;
     }
 
     public int getNumber() {
