@@ -1,6 +1,6 @@
 package Trip;
 
-import Exceptions.TripParameterException;
+import Exceptions.*;
 
 public class TripParameters extends TripPools {
 
@@ -42,10 +42,10 @@ public class TripParameters extends TripPools {
     public static void Number(int tripNumber){
         if (tripNumber < 0){
             System.out.println("number of travellers must be larger than zero");
-            throw new NumberFormatException();
+            throw new TripNumberParameterException();
         } else if (tripNumber > 15) {
             System.out.println("number of travellers must be less than zero");
-            throw new NumberFormatException();
+            throw new TripNumberParameterException();
         } else {
             trip.setNumber(tripNumber);
         }
@@ -54,9 +54,10 @@ public class TripParameters extends TripPools {
     public static void Duration(int tripDuration){
         if (tripDuration < 0){
             System.out.println("duration of trip must be larger than zero days");
-            throw new NumberFormatException();
+            throw new TripNumberParameterException();
         } else if (tripDuration > 61){
             System.out.println("duration if trip must be less than 2 month");
+            throw new TripNumberParameterException();
         } else {
             trip.setDuration(tripDuration);
         }

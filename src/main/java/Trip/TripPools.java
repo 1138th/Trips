@@ -1,6 +1,6 @@
 package Trip;
 
-class TripPools extends Trip {
+public class TripPools extends Trip {
 
     static String[] TypePool(){
         String[] pool = new String[8];
