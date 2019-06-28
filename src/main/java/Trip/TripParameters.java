@@ -4,8 +4,6 @@ import Exceptions.*;
 
 public class TripParameters extends TripPools {
 
-    private static Trip trip;
-
     private static boolean AccessingParameter(String parameter, String[] parametersPool){
         for (String parameterItem : parametersPool){
             if (parameter.equals(parameterItem)){
@@ -15,7 +13,7 @@ public class TripParameters extends TripPools {
         return false;
     }
 
-    public static void Type(String tripType){
+    public static void Type(String tripType, Trip trip){
         if (AccessingParameter(tripType, TripPools.TypePool())){
             trip.setType(tripType);
         } else {
@@ -23,7 +21,7 @@ public class TripParameters extends TripPools {
         }
     }
 
-    public static void Transport(String tripTransport){
+    public static void Transport(String tripTransport, Trip trip){
         if (AccessingParameter(tripTransport, TripPools.TransportPool())){
             trip.setTransport(tripTransport);
         } else {
@@ -31,7 +29,7 @@ public class TripParameters extends TripPools {
         }
     }
 
-    public static void Food(String tripFood){
+    public static void Food(String tripFood, Trip trip){
         if (AccessingParameter(tripFood, TripPools.FoodPool())){
             trip.setFood(tripFood);
         } else{
@@ -39,7 +37,7 @@ public class TripParameters extends TripPools {
         }
     }
 
-    public static void Number(int tripNumber){
+    public static void Number(int tripNumber, Trip trip){
         if (tripNumber < 0){
             System.out.println("number of travellers must be larger than zero");
             throw new TripNumberParameterException();
@@ -51,7 +49,7 @@ public class TripParameters extends TripPools {
         }
     }
 
-    public static void Duration(int tripDuration){
+    public static void Duration(int tripDuration, Trip trip){
         if (tripDuration < 0){
             System.out.println("duration of trip must be larger than zero days");
             throw new TripNumberParameterException();

@@ -12,7 +12,7 @@ public abstract class Trip {
         return type;
     }
 
-    protected void setType(String type) {
+    public void setType(String type) {
         this.type = type;
     }
 
@@ -20,7 +20,7 @@ public abstract class Trip {
         return transport;
     }
 
-    protected void setTransport(String transport) {
+    public void setTransport(String transport) {
         this.transport = transport;
     }
 
@@ -28,7 +28,7 @@ public abstract class Trip {
         return food;
     }
 
-    protected void setFood(String food) {
+    public void setFood(String food) {
         this.food = food;
     }
 
@@ -44,7 +44,7 @@ public abstract class Trip {
         return duration;
     }
 
-    protected void setDuration(int duration) {
+    public void setDuration(int duration) {
         this.duration = duration;
     }
 }

@@ -6,7 +6,7 @@ public class TripPools extends Trip {
         String[] pool = new String[8];
         int i = 0;
         pool[i++] = "vacation";
-        pool[i++] = "excursion:";
+        pool[i++] = "excursion";
         pool[i++] = "shopping";
         pool[i++] = "cruise";
         pool[i++] = "therapy";
