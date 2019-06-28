@@ -3,8 +3,6 @@ import Trip.TripParameters;
 import Trip.TripPools;
 import WorkWithTrips.BuildTrip;
 
-import java.util.HashMap;
-
 public class Main extends BuildTrip {
 
     public static void main(String[] args) {

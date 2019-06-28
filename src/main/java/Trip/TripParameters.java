@@ -38,7 +38,7 @@ public class TripParameters extends TripPools {
     }
 
     public static void Number(int tripNumber, Trip trip){
-        if (tripNumber < 0){
+        if (tripNumber <= 0){
             System.out.println("number of travellers must be larger than zero");
             throw new TripNumberParameterException();
         } else if (tripNumber > 15) {
@@ -50,7 +50,7 @@ public class TripParameters extends TripPools {
     }
 
     public static void Duration(int tripDuration, Trip trip){
-        if (tripDuration < 0){
+        if (tripDuration <= 0){
             System.out.println("duration of trip must be larger than zero days");
             throw new TripNumberParameterException();
         } else if (tripDuration > 61){
