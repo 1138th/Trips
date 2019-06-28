@@ -12,12 +12,6 @@ public class BuildTrip extends TripPools {
 
     private static Scanner scan = new Scanner(System.in);
 
-    public static void ChoosingDestination(Trip trip){
-        String parameter;
-        System.out.println("select your trip destination:");
-
-    }
-
     public static void ChoosingPatternString(String parameterType, String[] pool, Trip trip){
         String parameter;
         System.out.println("select trip " + parameterType + " from one of the following:");
@@ -83,5 +77,15 @@ public class BuildTrip extends TripPools {
                 System.out.println("please enter correct " + parameterType);
             }
         }
+    }
+
+    public static void PrintTrip(Trip trip){
+        System.out.println("your trip created: ");
+        System.out.println("trip type: " + trip.getType());
+        System.out.println("transport: " + trip.getTransport());
+        System.out.println("food: " + trip.getFood());
+        System.out.println("number of persons: " + trip.getNumber());
+        System.out.println("trip duration: " + trip.getDuration());
+        System.out.println("would you like to create another trip? (y/n)");
     }
 }

@@ -2,20 +2,11 @@ package Trip;
 
 public abstract class Trip {
 
-    private String destination;
     private String type;
     private String transport;
     private String food;
     private int number;
     private int duration;
-
-    public String getDestination() {
-        return destination;
-    }
-
-    public void setDestination(String destination) {
-        this.destination = destination;
-    }
 
     public String getType() {
         return type;
