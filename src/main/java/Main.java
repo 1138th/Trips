@@ -6,7 +6,7 @@ import java.util.HashMap;
 public class Main extends BuildTrip {
 
     public static void main(String[] args) {
-        HashMap<Integer, TripParameters> tripsSet = new HashMap<Integer, TripParameters>();
+        HashMap<Integer, TripParameters> tripsSet = new HashMap<>();
         int tripIndex = 0;
         String answer;
         System.out.println("hello, we're starting to build trips set\n" +
@@ -32,5 +32,13 @@ public class Main extends BuildTrip {
             GenerateRandomSet(tripsSet, tripsQuantity);
         }
         Print.PrintSet(tripsSet);
+        do {
+            SortTrip.Sort(tripsSet, SortTrip.SortParameter());
+            Print.PrintSet(tripsSet);
+            System.out.println("do you want to sort your set by some another parameter? (y/n)");
+
+            answer = Answers.ChooseAnswer("y", "n");
+        } while (answer.equals("y"));
+        tripsSet.clear();
     }
 }

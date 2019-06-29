@@ -14,7 +14,7 @@ public class BuildTrip extends TripPools {
 
     private static Scanner scan = new Scanner(System.in);
 
-    public static void ChoosingPatternString(String parameterType, String[] pool, Trip trip) {
+    protected static void ChoosingPatternString(String parameterType, String[] pool, Trip trip) {
         String parameter;
         System.out.println("select trip " + parameterType + " from one of the following:");
         while (true) {
@@ -48,7 +48,7 @@ public class BuildTrip extends TripPools {
         }
     }
 
-    public static void ChoosingPatternInteger(String parameterType, Trip trip) {
+    protected static void ChoosingPatternInteger(String parameterType, Trip trip) {
         int parameter;
         System.out.println("select trip " + parameterType + " with next condition:");
         while (true) {
@@ -81,7 +81,7 @@ public class BuildTrip extends TripPools {
         }
     }
 
-    public static void GenerateRandomSet(HashMap<Integer, TripParameters> tripsSet, int tripsQuantity) {
+    protected static void GenerateRandomSet(HashMap<Integer, TripParameters> tripsSet, int tripsQuantity) {
         int index = 0;
         Random rand = new Random();
         while (tripsQuantity-- > 0) {
