@@ -2,7 +2,7 @@ package Trip;
 
 public class TripPools extends Trip {
 
-    protected static String[] TypePool(){
+    protected static String[] TypePool() {
         String[] pool = new String[8];
         int i = 0;
         pool[i++] = "vacation";
@@ -16,7 +16,7 @@ public class TripPools extends Trip {
         return pool;
     }
 
-    protected static String[] TransportPool(){
+    protected static String[] TransportPool() {
         String[] pool = new String[7];
         int i = 0;
         pool[i++] = "air";
@@ -29,7 +29,7 @@ public class TripPools extends Trip {
         return pool;
     }
 
-    protected static String[] FoodPool(){
+    protected static String[] FoodPool() {
         String[] pool = new String[7];
         int i = 0;
         pool[i++] = "breakfast";
